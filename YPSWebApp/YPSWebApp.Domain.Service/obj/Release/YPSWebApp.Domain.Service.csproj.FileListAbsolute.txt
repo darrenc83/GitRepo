@@ -1,0 +1,9 @@
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\bin\Release\YPSWebApp.Domain.Service.dll
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\bin\Release\YPSWebApp.Domain.Service.pdb
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\bin\Release\Data.Repository.dll
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\bin\Release\Shared.Core.dll
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\bin\Release\Data.Repository.pdb
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\bin\Release\Shared.Core.pdb
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\obj\Release\YPSWebApp.Domain.Service.csprojResolveAssemblyReference.cache
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\obj\Release\YPSWebApp.Domain.Service.dll
+C:\YPSWebApp\YPSWebApp\YPSWebApp.Domain.Service\obj\Release\YPSWebApp.Domain.Service.pdb

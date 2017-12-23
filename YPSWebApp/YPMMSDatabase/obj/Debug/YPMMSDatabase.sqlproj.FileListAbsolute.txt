@@ -1,0 +1,5 @@
+C:\YPSWebApp\YPSWebApp\YPMMSDatabase\bin\Debug\YPMMSDatabase.dacpac
+C:\YPSWebApp\YPSWebApp\YPMMSDatabase\bin\Debug\YPMMSDatabase.dll
+C:\YPSWebApp\YPSWebApp\YPMMSDatabase\bin\Debug\YPMMSDatabase.pdb
+C:\YPSWebApp\YPSWebApp\YPMMSDatabase\obj\Debug\YPMMSDatabase.dll
+C:\YPSWebApp\YPSWebApp\YPMMSDatabase\obj\Debug\YPMMSDatabase.pdb

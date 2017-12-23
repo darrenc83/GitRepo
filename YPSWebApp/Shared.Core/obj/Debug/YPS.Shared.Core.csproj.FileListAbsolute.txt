@@ -1,0 +1,4 @@
+C:\YPSWebApp\YPSWebApp\Shared.Core\bin\Debug\Shared.Core.dll
+C:\YPSWebApp\YPSWebApp\Shared.Core\bin\Debug\Shared.Core.pdb
+C:\YPSWebApp\YPSWebApp\Shared.Core\obj\Debug\Shared.Core.dll
+C:\YPSWebApp\YPSWebApp\Shared.Core\obj\Debug\Shared.Core.pdb
