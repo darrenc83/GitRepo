@@ -1,0 +1,36 @@
+﻿@using YPMMS.Shared.Core.Models
+@model IList<ReportSystemIncomePerformanceDayModel>
+
+@{
+    var currentDate = (new DateTime(ViewBag.ReportYear, ViewBag.ReportMonth, 1));
+    var monthLongString = currentDate.ToString("MMMM");
+}
+<!--This will change to be like Live-Collect-->
+<header>
+    <div id="daysLeftArrowButton" class="left-switch-arrow"><span class="triangle top"></span><span class="triangle bottom"></span></div>
+    <div id="daysRightArrowButton" class="right-switch-arrow"><span class="triangle top"></span><span class="triangle bottom"></span></div>
+</header>
+<div class="graph-body days" data-year="@ViewBag.ReportYear" data-month-belong="@monthLongString">
+
+    <div class="title"><div>@monthLongString</div></div>
+    <ul class="y-axis">
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li class="zero"><div class="amount">£0</div></li>
+    </ul>
+    <div class="bars-container">
+        <!--options are: days, months-->
+        @foreach (var day in Model)
+        {
+            string dayTotalString = string.Format("{0:0.00}", day.Total);
+            
+            <div class="bars-outer">
+                <div class="heading-title"><span class="triangle top"></span><span class="triangle bottom"></span>@day.Day</div>
+                <div class="fill" data-day="@day.Day" data-total-money="@dayTotalString"></div>
+            </div>
+        }
+    </div>
+</div><!--end graph body-->                    

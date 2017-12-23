@@ -1,0 +1,43 @@
+﻿@using System.Web.Configuration
+@using YPMMS.Shared.Core.Models
+@model IList<ReportHopperMinimumModel>
+
+<div class="actual-information drag-scroll">
+    <a class="left-arrow fix-this-at-top"></a>
+    <a class="right-arrow fix-this-at-top scrollright"></a>
+    <div class="pillars left"></div>
+    <div class="shadow left"></div>
+    <div class="pillars right"></div>
+    <div class="shadow right"></div>
+    <header class="stick-this">
+        <ul class="header-inside fix-this-at-top">
+            @for (var currentDate = ViewBag.ReportStart; currentDate < ViewBag.ReportEnd; currentDate = currentDate.AddDays(1))
+            {
+                <li><p>@currentDate.ToString(ViewBag.ShortCustomDateFormat)</p></li>
+            }
+        </ul>
+    </header>
+    <div class="reports-content">
+        @foreach (var machine in Model)
+        {
+            <ul class="report-container">
+                <li class="report-row" data-id="@machine.MachineId">
+                    @foreach (var day in machine.Days)
+                    {
+                        var minimumHopperLevel = int.Parse(WebConfigurationManager.AppSettings["MinimumHopperLevel"]);
+
+                        <div class="cell @(day.Minimum < minimumHopperLevel ? "refill-needed" : "") @(day.RefillTotal == 0 ? "checked" : "") @(day.RefillTotal > 0 ? "refill-done" : "")">
+                            @(day.Minimum == null ? "-" : string.Format("£{0:0.00}", day.Minimum))
+                        </div>
+                        @*<div class="cell refill-needed">£120</div>
+                        <div class="cell checked refill-needed">£230</div>
+                        <div class="cell checked refill-done">£200</div>
+                        <div class="cell refill-needed refill-done">£150</div>
+                        <div class="cell">£56</div>
+                        <div class="cell">£56</div>*@
+                    }
+                </li>
+            </ul>
+        }
+    </div><!--end reports content-->
+</div>

@@ -1,0 +1,30 @@
+2017-11-27 07:30:49.3483 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 07:31:40.5076 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-11-27 07:34:45.5093 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 07:34:54.0487 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-11-27 09:22:22.9896 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 09:22:29.3687 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-11-27 09:22:58.4607 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 09:23:07.0194 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-11-27 09:31:05.8245 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 09:31:09.0748 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:32:02.0741 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:32:16.2158 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:34:11.2361 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:36:11.7243 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 09:36:17.0414 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:39:34.1038 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 09:39:38.8628 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:40:37.9380 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 09:40:43.7951 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:41:38.4238 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-11-27 09:41:44.1354 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
+2017-11-27 09:42:23.5807 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)

@@ -1,0 +1,188 @@
+[
+  {
+    "outputFileName": "Scripts/Views/Collector.Index.min.js",
+    "inputFiles": [
+      "Scripts/Views/Collector.Index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Machine.Index.min.js",
+    "inputFiles": [
+      "Scripts/Views/Machine.Index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Collectors.Index.min.js",
+    "inputFiles": [
+      "Scripts/Views/Collectors.Index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Manager.Index.min.js",
+    "inputFiles": [
+      "Scripts/Views/Manager.Index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Manager.RefillSystem.min.js",
+    "inputFiles": [
+      "Scripts/Views/Manager.RefillSystem.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Overview.Index.min.js",
+    "inputFiles": [
+      "Scripts/Views/Overview.Index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/History.Index.min.js",
+    "inputFiles": [
+      "Scripts/Views/History.Index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Shared/DatePicker.min.js",
+    "inputFiles": [
+      "Scripts/Views/Shared/DatePicker.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Shared/Format.min.js",
+    "inputFiles": [
+      "Scripts/Views/Shared/Format.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Shared/Tools.min.js",
+    "inputFiles": [
+      "Scripts/Views/Shared/Tools.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/daterangepicker.min.js",
+    "inputFiles": [
+      "Scripts/daterangepicker.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/main.min.js",
+    "inputFiles": [
+      "Content/js/main.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Admin.SystemManagement.min.js",
+    "inputFiles": [
+      "Scripts/Views/Admin.SystemManagement.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Admin.AddSystem.min.js",
+    "inputFiles": [
+      "Scripts/Views/Admin.AddSystem.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Shared/MapDefaults.min.js",
+    "inputFiles": [
+      "Scripts/Views/Shared/MapDefaults.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery-ui.min.js",
+    "inputFiles": [
+      "Scripts/jquery-ui.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/selectableScroll.min.js",
+    "inputFiles": [
+      "Scripts/selectableScroll.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Chart.min.js",
+    "inputFiles": [
+      "Scripts/Chart.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/markerclusterer.min.js",
+    "inputFiles": [
+      "Scripts/markerclusterer.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/smoothscroll.min.js",
+    "inputFiles": [
+      "Scripts/smoothscroll.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery.capslockstate.min.js",
+    "inputFiles": [
+      "Scripts/jquery.capslockstate.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/animations.min.css",
+    "inputFiles": [
+      "Content/css/animations.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/daterangepicker.min.css",
+    "inputFiles": [
+      "Content/css/daterangepicker.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/form-styles.min.css",
+    "inputFiles": [
+      "Content/css/form-styles.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/sprites.min.css",
+    "inputFiles": [
+      "Content/css/sprites.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/plugins.min.js",
+    "inputFiles": [
+      "Content/js/plugins.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/touch-gestures.min.js",
+    "inputFiles": [
+      "Content/js/touch-gestures.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Admin.Index.min.js",
+    "inputFiles": [
+      "Scripts/Views/Admin.Index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Shared/SystemEvents.min.js",
+    "inputFiles": [
+      "Scripts/Views/Shared/SystemEvents.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Shared/Header.min.js",
+    "inputFiles": [
+      "Scripts/Views/Shared/Header.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Views/Machine.Events.min.js",
+    "inputFiles": [
+      "Scripts/Views/Machine.Events.js"
+    ]
+  }
+]

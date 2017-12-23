@@ -1,0 +1,253 @@
+﻿@using YPMMS.Display.Utilities
+@using YPMMS.Display.Website.Models.Breadcrumb
+@using YPMMS.Shared.Core.Enums
+@using YPMMS.Shared.Core.Extensions
+@model YPMMS.Shared.Core.Models.Machine
+
+@{
+    ViewBag.Title = "System Information";
+
+    var breadcrumbTrail = new BreadcrumbTrailModel()
+        .Add(BreadcrumbType.Overview)
+        .Add(BreadcrumbType.Machine);
+
+    var machineStatusCssClass =
+        Model.Status.IsError() ? "error" :
+        Model.Status.IsFull() ? "warning" :
+        string.Empty;
+}
+
+<section class="content" id="@Model.Id-machine-details">
+
+    <div id="tmp-data"></div>
+
+    <main class="container-fluid">
+
+        @Html.Partial("Breadcrumb", breadcrumbTrail)
+        <div class="row">
+            <div class="col-md-12">
+                <div class="individual-system-options">
+                    <a class="subtle-light-btn modalTrigger" data-modal="dialog-system-information-spec">System Details</a>
+                    <a class="subtle-light-btn disabled">Check for Updates</a>
+                    <a class="subtle-light-btn" href="/Machine/@Model.Id/Events">Event Log</a>
+                </div>
+                <hr />
+            </div>
+
+
+            <div class="col-md-8">
+                <table class="mobile-responsive individual-system-information">
+                    <tr>
+                        <td>System Name:</td>
+                        <td class="system-name">@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Site Name:</td>
+                        <td class="site-name">@Model.Site.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td class="address">@Model.Site.FullAddress</td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td class="country">@Model.Site.Country</td>
+                    </tr>
+                    <tr>
+                        <td>Assigned Collector(s):</td>
+                        <td class="assigned-collectors">TODO</td>
+                    </tr>
+                    <tr>
+                        <td>System Status:</td>
+                        <td><span id="machine-status" class="individual-system-state @machineStatusCssClass">@Model.Status.GetDescription()</span></td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="latest-status-container">
+            <h1>Cash View</h1>
+            <div class="last-update">
+                Last Update:
+                <span class="date">@Format.AsDate(Model.LastConnectedTime.GetValueOrDefault())</span>
+                <span class="time">@Format.AsTime(Model.LastConnectedTime.GetValueOrDefault())</span>
+            </div>
+            @Html.Partial("~/Views/Shared/Tables/IndividualSystemCashTable.cshtml")
+        </div>
+
+        <div class="collection-history">
+            <h1>Collection History</h1>
+
+            <div id="reportrange" class="pull-left">
+                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                <span></span> <b class="caret"></b>
+            </div>
+            <div class="clearfix" style="margin-bottom: 20px;"></div>
+            <div class="row">
+                <div class="col-xl-5 col-lg-6">
+                    <div id="collection-times">
+
+                        @***** START: Template for the date section of the collections table *****@
+                        <ul id="template__collection-date-section" class="collection-date-section hidden">
+                            <span class="circle-indicator"></span>
+                            <span class="vertical-line"></span>
+                            <li class="full-day-sum">
+                                <span class="day-date"></span>
+                                <span class="day-collected">
+                                    <span class="triangle"></span>
+                                    <span class="full-day-collected"></span>
+                                    <span class="up-down-indicator up"></span>
+                                </span>
+                                <span class="day-refill">
+                                    <span class="triangle"></span>
+                                    <span class="full-day-refilled"></span>
+                                    <span class="up-down-indicator down"></span>
+                                </span>
+                            </li>
+
+                            @***** START: Template for an individual row in the collections table *****@
+                            <li id="template__collection-row" class="hidden">
+                                <a></a>
+                                <span class="collected"></span>
+                                <span class="refill"></span>
+                            </li>
+                            @***** END: Template for an individual row in the collections table *****@
+
+                        </ul>
+                        @***** END: Template for the date section of the collections table *****@
+
+                    </div>
+                </div>
+
+                <div class="col-xl-7 col-lg-6">
+                    @*<div class="collection-graph-container">
+                            <h2><span id="chart-heading-start-date"></span> - <span id="chart-heading-end-date"></span></h2>
+                            <div id="chart_div"></div>
+                        </div>*@
+                    <div class="map-container"><div id="map"></div></div>
+                </div><!--end col-->
+
+            </div><!--end row-->
+        </div><!--end collection-history-->
+
+        <hr />
+
+        @* Tim didn't believe the figures so removed this code
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="reports-all-system-income-graph">
+                        <h1>Reports for this System</h1>
+                        <h3>Total Income for this System</h3>
+                        <div class="time-selection-buttons pt-page-moveFromRightFade">
+                            <a class="months selected">Months</a>
+                            <a class="days">Days</a>
+                        </div>
+                        <div id="incomePerformanceMonthsGraphContainer" class="graph-container month-view">
+                            @{ Html.RenderAction("IncomePerformanceMonthsGraph", "ReportShared", new { machineId = Model.Id }); }
+                        </div>
+                        <div id="incomePerformanceDaysGraphContainer" class="graph-container day-view hidden">
+                            @{ Html.RenderAction("IncomePerformanceDaysGraph", "ReportShared", new { machineId = Model.Id }); }
+                        </div><!--end-graph container-->
+                        <?php include('includes/reports/graph/reports-income-graph-days-view.php') ?>
+
+                        <!--start information about the graph that is shown at the bottom-->
+                        <div class="graph-information">
+                            <header class="date-title"><span class="month">November</span><span class="year"> 2016</span></header>
+                            <div class="row information-content">
+                                <div class="col-lg-6 income-for-date-info">
+                                    <div class="img-container"><img src="~/Content/img/general/hand-coin-icon-grey.png"></div>
+                                    <div class="total-amount"><small id="monthlyAmount"> </small>986.56</div>
+                                    <p>Monthly Income Total</p>
+                                </div>
+                                <div class="col-lg-6 yearly-total-info">
+                                    <div class="yearly-total-title"><small id="yearlyAmount"> </small>90898.98</div>
+                                    <p>Yearly Total</p>
+                                    <!--<p class="total-change-percent up"><span class="up-down-indicator up"></span><span class="percent"> 22.3% </span>from last year</p>-->
+                            </div>
+                        </div><!--end graph-information-->
+                                </div>
+                    </div><!--end reports-container-->
+                </div><!--end col-->
+            </div><!--end row-->*@
+
+    </main>
+
+    <!--dialog-->
+    <div class="overlay">
+
+        <section style="max-width: 700px" class="dialog" id="dialog-system-information-spec">
+            <header>
+                <a class="close-dialog"><span class="circle"></span><span class="close-cross"></span></a>
+                <h1>System Information</h1><!--options: centered-->
+            </header>
+            <div class="scrollable-content">
+                <main class="dialog-content">
+
+                    <table style="margin-top: 20px;" class="individual-system-information">
+                        <tr>
+                            <td>System Name:</td>
+                            <td class="system-name">@Model.Name</td>
+                        </tr>
+                        <tr>
+                            <td>Site Name:</td>
+                            <td class="site-name">@Model.Site.Name</td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td class="address">@Model.Site.FullAddress</td>
+                        </tr>
+                        <tr>
+                            <td>Country:</td>
+                            <td class="country">@Model.Site.Country</td>
+                        </tr>
+                    </table>
+
+                        <table class="common-simple-table mobile-responsive" id="components-information-table">
+                        <tr>
+                            <th></th>
+                            <th>Firmware</th>
+                            <th>H/W Build Revision</th>
+                        </tr>
+
+                        @***** START: Template for the manifest section of the system info dialog *****@
+                        <tr id="template__machine-manifest-row" class="machine-manifest-row hidden">
+                            <td class="device-code"></td>
+                            <td class="version"></td>
+                            <td class="build-revision"></td>
+                        </tr>
+                        @***** END: Template for the manifest section of the system info dialog *****@
+
+                    </table>
+                </main>
+            </div>
+            <footer>
+                <a class="subtle-light-btn cancel-btn">Close</a>
+            </footer>
+        </section>
+
+    </div>
+
+</section><!--end of content-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
+@section Scripts{
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtRa3gxfbyKlldNGgim0y5CN_F-EOdbHM"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="~/Content/js/pages/reports-root.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+
+
+    @Scripts.Render("~/bundles/js/ViewsMachineIndex")
+    <script>
+        $(document)
+            .ready(function() {
+                MachineIndex.initialise(@Model.Id, google);
+                $('#monthlyAmount').innerHtml = localStorage.getItem("CurrencyCode");
+                $('#yearlyAmount').innerHtml = localStorage.getItem("CurrencyCode");
+               
+            });
+    </script>
+}

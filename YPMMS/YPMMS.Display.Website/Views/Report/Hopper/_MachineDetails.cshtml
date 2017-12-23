@@ -1,0 +1,14 @@
+﻿@using YPMMS.Shared.Core.Models
+@model IList<MachineSite>
+@foreach (var machine in Model)
+{
+    <li class="report-row machine-details" data-id="@machine.Id">
+        <div class="cell">TBD</div>
+        <div class="cell">@Html.Encode(machine.Site.Name)</div>
+        <div class="cell">@Html.Encode(machine.Site.Town)</div>
+        <div class="cell postcode">@Html.Encode(machine.Site.Postcode)</div>
+        <div class="cell position">TBD</div>
+        <div class="cell">@Html.Encode(machine.Name)</div>
+        <div class="cell">TBD</div>
+    </li>
+}

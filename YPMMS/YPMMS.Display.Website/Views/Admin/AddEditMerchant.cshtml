@@ -1,0 +1,26 @@
+﻿@model YPMMS.Display.Website.Models.Admin.EditSystemViewModel
+
+@{
+    ViewBag.Title = (Model == null) ? "Add New Merchant" : "Edit Merchant";
+    var editMerchantId = Model?.MerchantId.ToString() ?? "null";
+}
+
+<div>
+    @Html.Partial("Partials/AddMerchant")
+    @Html.Partial("Partials/AddMerchantSeller")
+    @Html.Partial("Partials/AddMerchantTerminal")
+    @Html.Partial("Partials/AddSystemSetupComplete")
+</div>
+
+@section Scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtRa3gxfbyKlldNGgim0y5CN_F-EOdbHM"></script>
+    @Scripts.Render("~/bundles/js/markerclusterer")
+    @Scripts.Render("~/bundles/js/ViewsAdminAddSystem")
+    <script>
+        $(document)
+            .ready(function() {
+                AdminAddSystem.initialise(google, @editMerchantId);
+               
+            });
+    </script>
+}

@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Merchant Overview";
+}
+
+@*<div id="map-container">
+    <div id="world-map" class="has-parallax"></div>
+</div>*@
+
+<section class="stuff-that-scrolls">
+    <h1>Merchant Overview</h1>
+    @*<div class="country-select-title">
+        <h1>You have a total of <strong id="machines-total">0</strong> systems</h1>
+    </div>*@
+
+    @*<div class="all-systems-status">
+        <div class="status-icons system-offline-icon"><div></div><p>Offline: <span id="offline-total">0</span></p></div>
+        <div class="status-icons system-full-icon"><div></div><p>Full: <span id="full-total">0</span></p></div>
+        <div class="status-icons system-error-icon"><div></div><p>Errors: <span id="errors-total">0</span></p></div>
+        <div class="status-icons system-update-icon"><div></div><p>Updates: <span id="updates-total">0</span></p></div>
+    </div>*@
+
+    @*<div class="all-systems-mini-reports">   
+        <div class="mini-cash-report">
+            <p>Total <strong>overall</strong> collectable cash</p>
+            <p class="value"><span id="overall-cash">£0.00</span></p>
+        </div>
+    </div>*@
+
+    <div class="systems-container">
+
+        @***** START: Template for the machine UI sections *****@
+        <table id="merchant-list-table" class="common-simple-table mobile-responsive-big">
+            <tr>
+                
+                <th>Merchant Name</th>
+                <th>Merchant Id</th>
+                <th>Created By</th>
+                <th>Created On</th>
+                <th>Last Updated By</th>
+                <th>Last Updated On</th>                
+                <th>Seller</th>
+                <th>Acquiring Bank</th>
+               
+            </tr>
+
+            @***** START: Template for the collector row *****@
+            <tr id="template__merchant-details" class="hidden-mobile-titles collector-summary-row">
+                
+                <td class="merchant-name"><strong></strong></td>
+                <td class="merchant-id"></td>
+                <td class="created-by"></td>
+                <td class="created-on"><a></a></td>
+                <td class="last-updated-by"></td>
+                <td class="last-updated-on"></td>              
+                <td class="seller"></td>
+                <td class="acquiring-bank"></td>
+            </tr>
+            @***** END: Template for the collector row *****@
+
+        </table>
+
+
+
+        @*<section id="template__machine" class="machine hidden">
+            <h1 class="machine-country-title"></h1>
+            <p class="machine-category-title"></p>
+
+           
+        </section>*@
+        @***** END: Template for the machine UI sections *****@
+
+
+    </div>
+</section>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/js/markerclusterer")
+    @Scripts.Render("~/bundles/js/ViewsOverviewIndex")
+    <script>
+        $(document).ready(function () {
+            OverviewIndex.initialise();
+        });
+    </script>
+}

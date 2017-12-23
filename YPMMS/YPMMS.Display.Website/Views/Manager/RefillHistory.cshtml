@@ -1,0 +1,37 @@
+﻿@using YPMMS.Display.Website.Models.Breadcrumb
+@{
+    var breadcrumbTrail = new BreadcrumbTrailModel()
+        .Add(BreadcrumbType.ManagerRefill)
+        .Add(BreadcrumbType.ManagerMachineProfile);
+}
+
+<section class="content">
+    <main class="container-fluid">
+
+        @Html.Partial("Breadcrumb", breadcrumbTrail)
+
+        <main id="Collection-history-content" class="pt-page-moveFromRightFade">
+            <h1>Refill Details</h1>
+            <div class="individual-collection-time">
+                <span class="date">21/02/16</span><span class="time">08:50:15  AM</span>
+            </div>
+            @Html.Partial("~/Views/Shared/SystemDetailsInformation.cshtml")
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1><img src="~/Content/img/general/refill-systems-icon-grey.png" width="16" style="margin-right: 10px;">Refill Summary</h1>
+                    <p class="small-helper-text">The following table shows the total amount of each coin and bill that were refilled</p>
+                    @Html.Partial("~/Views/Shared/Tables/CashTableCollectedRefilled.cshtml")
+                    <h2>Total Cash Refilled = <strong>€130</strong></h2>
+                </div>
+            </div><!--end row-->
+
+        </main>
+
+
+
+
+    </main><!--end container-->
+
+</section><!--end of content-->

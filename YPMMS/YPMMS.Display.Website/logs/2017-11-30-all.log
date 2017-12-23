@@ -1,0 +1,149 @@
+2017-11-30 07:20:50.8234 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 07:31:53.3596 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 07:32:16.6098 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 07:46:30.0267 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 07:48:53.2888 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 07:48:59.4645 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 07:53:29.3049 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 07:53:39.3910 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 08:07:59.6917 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 08:08:06.1609 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 09:45:59.3762 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 09:56:20.7766 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 09:59:19.2986 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 09:59:25.7856 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 11:21:10.1566 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:21:44.6695 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 11:23:11.0679 ERROR YPMMS.Display.Website.Controllers.AdminController System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@MerchantId".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.MerchantRepository.<DoesMerchantExistAsync>d__3.MoveNext() in C:\YPMMS\YPMMS.Data.Repository\Repositories\MerchantRepository.cs:line 160
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.MerchantDataService.<DoesMerchantExistAsync>d__3.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\MerchantDataService.cs:line 150
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.AdminController.<ValidateMerchantDetailsAsync>d__8.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\AdminController.cs:line 279
+ClientConnectionId:d635b3fe-8ab4-4b10-9e1f-e1ef965c5339
+Error Number:137,State:2,Class:15
+2017-11-30 11:24:14.1701 ERROR YPMMS.Display.Website.Controllers.AdminController System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@MerchantId".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.MerchantRepository.<DoesMerchantExistAsync>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.MerchantDataService.<DoesMerchantExistAsync>d__3.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\MerchantDataService.cs:line 150
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.AdminController.<ValidateMerchantDetailsAsync>d__8.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\AdminController.cs:line 279
+ClientConnectionId:3693e6f9-1dfc-4946-85b4-dcb0624edccf
+Error Number:137,State:2,Class:15
+2017-11-30 11:24:53.3950 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:25:48.9783 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 11:26:38.3425 ERROR YPMMS.Display.Website.Controllers.AdminController System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@MerchantName".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.MerchantRepository.<DoesMachineNameExistAsync>d__4.MoveNext() in C:\YPMMS\YPMMS.Data.Repository\Repositories\MerchantRepository.cs:line 188
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.MerchantDataService.<DoesMachineNameExistAsync>d__4.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\MerchantDataService.cs:line 159
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.AdminController.<ValidateMerchantDetailsAsync>d__8.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\AdminController.cs:line 285
+ClientConnectionId:ef182545-0d06-4657-8967-19775c0b11a9
+Error Number:137,State:2,Class:15
+2017-11-30 11:27:30.4829 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:27:36.3291 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 11:31:25.4719 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:33:23.0808 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:41:18.6977 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 11:43:35.5322 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:43:44.2951 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 11:53:12.0129 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:54:04.9535 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:55:40.9627 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 11:57:17.0159 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:58:30.8648 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 11:58:36.4041 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 12:01:56.6521 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 12:02:40.6680 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 12:02:55.8073 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 13:07:59.2873 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 13:45:51.8765 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 13:46:00.1838 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 14:05:56.3243 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 14:06:00.6562 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 14:07:48.1042 ERROR YPMMS.Display.Website.Controllers.SystemEventsController System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'GetSystemEventsForUser'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.SystemEventRepository.<GetSystemEventsForUserAsync>d__1.MoveNext() in C:\YPMMS\YPMMS.Data.Repository\Repositories\SystemEventRepository.cs:line 51
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.SystemEventDataService.<GetSystemEventsForUserAsync>d__1.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\SystemEventDataService.cs:line 39
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.SystemEventsController.<GetSystemEventsAsync>d__0.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\SystemEventsController.cs:line 29
+ClientConnectionId:e1b2cd72-93c8-4f36-b1ae-465fbbd1f65e
+Error Number:2812,State:62,Class:16
+2017-11-30 15:42:31.6832 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 15:42:37.6294 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 15:58:38.4385 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 15:58:43.8495 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)
+2017-11-30 16:20:16.9230 INFO YPMMS.Display.Website.Startup Startup.Configuration() called
+2017-11-30 16:29:23.6805 INFO YPMMS.Display.Website.Controllers.AccountController User logged in:  (dclayton@innovative-technology.com)

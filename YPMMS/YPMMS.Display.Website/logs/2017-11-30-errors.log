@@ -1,0 +1,104 @@
+2017-11-30 11:23:11.0679 ERROR YPMMS.Display.Website.Controllers.AdminController System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@MerchantId".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.MerchantRepository.<DoesMerchantExistAsync>d__3.MoveNext() in C:\YPMMS\YPMMS.Data.Repository\Repositories\MerchantRepository.cs:line 160
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.MerchantDataService.<DoesMerchantExistAsync>d__3.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\MerchantDataService.cs:line 150
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.AdminController.<ValidateMerchantDetailsAsync>d__8.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\AdminController.cs:line 279
+ClientConnectionId:d635b3fe-8ab4-4b10-9e1f-e1ef965c5339
+Error Number:137,State:2,Class:15
+2017-11-30 11:24:14.1701 ERROR YPMMS.Display.Website.Controllers.AdminController System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@MerchantId".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.MerchantRepository.<DoesMerchantExistAsync>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.MerchantDataService.<DoesMerchantExistAsync>d__3.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\MerchantDataService.cs:line 150
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.AdminController.<ValidateMerchantDetailsAsync>d__8.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\AdminController.cs:line 279
+ClientConnectionId:3693e6f9-1dfc-4946-85b4-dcb0624edccf
+Error Number:137,State:2,Class:15
+2017-11-30 11:26:38.3425 ERROR YPMMS.Display.Website.Controllers.AdminController System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@MerchantName".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.MerchantRepository.<DoesMachineNameExistAsync>d__4.MoveNext() in C:\YPMMS\YPMMS.Data.Repository\Repositories\MerchantRepository.cs:line 188
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.MerchantDataService.<DoesMachineNameExistAsync>d__4.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\MerchantDataService.cs:line 159
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.AdminController.<ValidateMerchantDetailsAsync>d__8.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\AdminController.cs:line 285
+ClientConnectionId:ef182545-0d06-4657-8967-19775c0b11a9
+Error Number:137,State:2,Class:15
+2017-11-30 14:07:48.1042 ERROR YPMMS.Display.Website.Controllers.SystemEventsController System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'GetSystemEventsForUser'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Dapper.SqlMapper.<QueryAsync>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Data.Repository.Repositories.SystemEventRepository.<GetSystemEventsForUserAsync>d__1.MoveNext() in C:\YPMMS\YPMMS.Data.Repository\Repositories\SystemEventRepository.cs:line 51
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Domain.Service.Services.SystemEventDataService.<GetSystemEventsForUserAsync>d__1.MoveNext() in C:\YPMMS\YPMMS.Domain.Service\Services\SystemEventDataService.cs:line 39
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at YPMMS.Display.Website.Controllers.SystemEventsController.<GetSystemEventsAsync>d__0.MoveNext() in C:\YPMMS\YPMMS.Display.Website\Controllers\SystemEventsController.cs:line 29
+ClientConnectionId:e1b2cd72-93c8-4f36-b1ae-465fbbd1f65e
+Error Number:2812,State:62,Class:16

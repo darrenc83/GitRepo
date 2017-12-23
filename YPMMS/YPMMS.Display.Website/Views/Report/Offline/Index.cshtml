@@ -1,0 +1,148 @@
+﻿<section class="content">
+    <main class="container-fluid">
+        <div class="breadcrumb">
+            <a href="/Overview" class="home-button"></a>
+            <a href="/Report">Reports</a>
+            <span>•</span>
+            <p>Offline reports</p>
+        </div>
+
+        <div class="reports-mobile-message">
+            <h3>These Reports are not available on small resolutions</h3>
+            <h4>Please view this on a device with at least</h4>
+            <h4>1000px wide resolution</h4>
+        </div>
+
+        <div class="complete-container week-view second-view" id="reports-systems-24-hours">
+            <!--options: hour-view, week-view-->
+
+            <h1>System Offline Reports</h1>
+            <a class="download-report-btn">Download CSV report</a>
+
+            <!--LEFT SECTION-->
+            <section class="left-info">
+                <div class="toggle-options">
+
+                    <div id="option-hide-online" class="disabled">
+                        <label class="toggle-style no-text-small">
+                            <input type="checkbox" id="" class="checkbox-style" disabled />
+                            <span class="toggle-text"></span>
+                            <span class="toggle-handle"></span>
+                        </label>
+                        <p>Filter systems that did not go offline</p>
+                    </div>
+
+                    <div id="option-more-than-10" class="disabled">
+                        <label class="toggle-style no-text-small">
+                            <input type="checkbox" id="" class="checkbox-style" disabled />
+                            <span class="toggle-text"></span>
+                            <span class="toggle-handle"></span>
+                        </label>
+                        <p>Filter Systems offline for less than 10 hours</p>
+                    </div>
+                </div>
+                <!--end toggle-options-->
+
+                <input class="search-box" type="search" placeholder="quick filter results" name="search-list">
+
+            </section>
+
+            <!--RIGHT SECTION-->
+            <section class="right-info">
+                <div class="legend">
+                    <div class="offline"><span></span>Offline</div>
+                    <div class="offline-more-than-10"><span></span>Offline > 10</div>
+                    <div class="offline-more-than-24"><span></span>Offline > 24</div>
+                    <div class="opening-times"><span></span>Open times</div>
+                </div>
+                <div class="date-options">
+                    <!--date-picker-->
+                    <div id="reportrange">
+                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                        <span></span> <b class="caret"></b>
+                    </div>
+                    <div class="report-options-toggle"><a class="week-view selected switch-view" data-switch-view="week-view">View Days</a><a class="view-hours switch-view" data-switch-view="hours-view">View Hours</a></div>
+                    <div class="clearfix"></div>
+                </div><!--end date-options-->
+                <!--header for day-view-->
+                <header class="reports-details-header week-view">
+                    <div class="view-change">
+                        <span>view:</span>
+                        <a class="block-view selected"></a>
+                        <a class="time-view"></a>
+                    </div>
+                    <h1>Hours Offline each day</h1>
+                </header>
+                <!--header for hours-->
+                <header class="reports-details-header hours-view hidden">
+                    <a id="hourViewBackOneDay"class="back"></a>
+                    <h1><small>Hours Offline for date below (24 hours format):</small><span id="hourViewDateRangeDetail">Mon 12/02/2016 - Sun 18/02/2016</span></h1>
+                    <a id="hourViewForwardOneDay" class="next"></a>
+                </header>
+
+            </section>
+
+            <section id="machineDetails" class="system-details left-block">
+                <div class="actual-information drag-scroll">
+                    <a class="left-arrow fix-this-at-top"></a>
+                    <a class="right-arrow fix-this-at-top scrollright"></a>
+                    <div class="pillars left"></div>
+                    <div class="shadow left"></div>
+                    <div class="pillars right"></div>
+                    <div class="shadow right"></div>
+                    <header class="stick-this">
+                        <ul class="header-inside fix-this-at-top">
+                            <li><p>Customer</p><span class="little-arrow"></span></li>
+                            <li><p>Site Details</p><span class="little-arrow"></span></li>
+                            <li><p>Location</p><span class="little-arrow"></span></li>
+                            <li class="postcode"><p>Postcode</p><span class="little-arrow"></span></li>
+                            <li class="position"><p>Position</p><span class="little-arrow"></span></li>
+                            <li><p>Machine Name</p><span class="little-arrow"></span></li>
+                            <li><p>Depot</p><span class="little-arrow"></span></li>
+                        </ul>
+                    </header>
+
+                    <!--start of content-->
+                    <div class="reports-content">
+                        <ul class="report-container">
+                            @{Html.RenderAction("MachineDetails");}
+                        </ul>
+                    </div><!--end reports content-->
+                    <!--end of content-->
+
+                </div><!--end actual-information-->
+            </section>
+
+            <!--this includes the alternative views-->
+            <section id="daysViewContainer" class="system-details right-block view view2 hidden">
+                @{Html.RenderAction("Days");}
+            </section>
+
+            <section id="hourViewContainer" class="system-details right-block view hours-view hidden">
+                @{Html.RenderAction("Hours");}
+            </section>
+
+            <!--this is the default view for the right hand side that will show the days and the value of offline hours-->
+            <section id="hourTotalViewContainer" class="system-details right-block view week-view">
+                @{Html.RenderAction("HoursTotal");}
+            </section>
+
+</div><!--end complete-container-->
+
+    </main><!--end container--> 
+
+</section><!--end of content-->
+
+@section Scripts {
+    <script src="~/Content/js/pages/reports.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtRa3gxfbyKlldNGgim0y5CN_F-EOdbHM"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    @Scripts.Render("~/bundles/js/ViewsReportOffline")
+    <script>
+        $(document)
+            .ready(function() {
+                ReportOffline.initialise();
+            });
+    </script>
+}
+

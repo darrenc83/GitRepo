@@ -1,0 +1,17 @@
+2017-09-12 07:28:43.3384 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-12 07:28:58.8160 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL Development (itldev@itl.com)
+2017-09-12 08:11:21.9903 INFO LiveCollect.Display.Website.Controllers.AccountController User logged out: ITL Development (itldev@itl.com)
+2017-09-12 08:11:32.2797 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-09-12 08:17:42.2735 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-12 08:17:51.4977 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL USA (itlusa@itl.com)
+2017-09-12 11:11:40.0799 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-12 11:11:50.2480 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-09-12 11:14:43.6134 INFO LiveCollect.Display.Website.Controllers.AccountController User logged out: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-09-12 11:15:04.9967 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL USA (itlusa@itl.com)
+2017-09-12 11:17:59.3779 INFO LiveCollect.Display.Website.Controllers.AccountController User logged out: ITL USA (itlusa@itl.com)
+2017-09-12 11:18:14.8024 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-09-12 11:39:25.9189 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-12 11:39:29.4087 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-09-12 14:56:53.3954 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-12 14:57:02.4054 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: OTP Building Plastics (karen@otpsupplies.co.uk)
+2017-09-12 14:58:13.7737 INFO LiveCollect.Display.Website.Controllers.AccountController User logged out: OTP Building Plastics (karen@otpsupplies.co.uk)

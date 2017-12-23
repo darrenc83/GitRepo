@@ -1,0 +1,224 @@
+﻿@using YPMMS.Display.Utilities
+@using YPMMS.Display.Website.Models.Breadcrumb
+@using YPMMS.Shared.Core.Enums
+@using YPMMS.Shared.Core.Extensions
+
+@{ var TotalValue = 0;}
+
+@model YPMMS.Shared.Core.Models.TebsBag
+
+@{
+
+    var breadcrumbTrail = new BreadcrumbTrailModel()
+        .Add(BreadcrumbType.Overview)
+        .Add(BreadcrumbType.Machine);
+
+    ViewBag.Title = "Tebs Collect";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <main class="container-fluid">
+
+        @Html.Partial("Breadcrumb", breadcrumbTrail)
+
+            <div class="row">
+                <h1>Bag history for bag code @Model.code.Code.TrimStart('0')</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Cash Summary</p>
+                    <div id="tebs-bag-summary">
+                        <table class="mobile-responsive individual-system-information tebs-bag-info" >
+                           <tr><th>Denomination</th><th>Qty</th><th>Total</th></tr>
+                            @for (var i = 0; i < Model.count.Count; i++)
+                            {
+                                <tr>
+                                    <td>@Format.AsCurrency(Model.count[i].Value, Model.count[i].Country)</td>
+                                    <td> @Model.count[i].Number</td>
+                                    <td>@Format.AsCurrency(Model.count[i].Tot, Model.count[i].Country)</td>
+                                     @{TotalValue += Model.count[i].Number;}
+                                </tr>
+                            }
+                            @for (var i = 0; i < Model.total.Count; i++)
+                            {
+                                <tr>
+                                    <td>Grand Total</td>
+                                    <td>@TotalValue</td>
+                                    <td>@Format.AsCurrency(Model.total[i].Value, Model.total[i].Country)</td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            @if (@Model.sessionGroups != null && Model.sessionGroups.Count > 0)
+            {
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="mobile-responsive individual-system-information tebs-bag-info" id="tebs-group-history">
+                        <tr>
+                            <th>User</th>
+                            <th>Position</th>
+                            <th>Country</th>
+                            <th>Session total</th>
+                            <th>Session start</th>
+                            <th>Session End</th>
+                        </tr>
+                        @for (var i = 0; i < Model.sessionGroups.Count; i++)
+                        {
+                            <tr>
+                                <td>@Model.sessionGroups[i].Name @Model.sessionGroups[i].LastName</td>
+                                <td>@Model.sessionGroups[i].Position</td>
+                                <td>@Model.sessionGroups[i].Country</td>
+                                <td>@(Model.sessionGroups[i].Value == 0 ? "" : Format.AsCurrency(Model.sessionGroups[i].Value))</td>
+                                <td>@Format.AsTime(Model.sessionGroups[i].SessionStart)</td>
+                                <td>@Format.AsTime(Model.sessionGroups[i].SessionEnd)</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+            }
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>List of Bag events</h1>
+                    <table class="mobile-responsive individual-system-information tebs-bag-info table cell-border" id="tebs-bag-history">
+                        @*<thead>
+                            <tr><th>Date/Time</th><th>Machine ID</th><th>Event</th><th>Reject</th>
+                            <th>Collector</th><th>Country</th><th>Value</th></tr>
+                        </thead>
+                        <tbody>
+                        @for (var i = 0; i < Model.history.Count; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @Format.AsDate(Model.history[i].Timestamp) @Format.AsTime(Model.history[i].Timestamp)
+                                </td>
+                                <td>
+                                    @Model.history[i].MachineId
+                                </td>
+                                <td>
+                                    @Model.history[i].RecordType
+                                </td>
+                                <td>
+                                    @(Model.history[i].RejectCode == "None" ? "" : Model.history[i].RejectCode)
+                                </td>
+                                <td>
+                                    @(Model.history[i].KeyId == 0 ? "" : Model.history[i].KeyId.ToString())
+                                </td>
+                                <td>
+                                    @(Model.history[i].Country == "..." ? "" : Model.history[i].Country)
+                                </td>
+                                <td>
+                                    @(Model.history[i].Value == 0 ? "" : Format.AsCurrency(Model.history[i].Value, Model.history[i].Country))
+                                </td>
+                            </tr>
+                        }*@
+                    @if (Model.buttonRecords != null && Model.buttonRecords.Count > 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>Date/Time</th>
+                                <th>Event</th>
+                                <th>Reject</th>
+                                <th>User</th>
+                                <th>Country</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < Model.buttonRecords.Count; i++)
+                            {
+                                <tr>
+                                    <td>
+                                        @Format.AsDate(Model.buttonRecords[i].Timestamp) @Format.AsTime(Model.buttonRecords[i].Timestamp)
+                                    </td>
+                                    <td>
+                                        @Model.buttonRecords[i].RecordType
+                                    </td>
+                                    <td>
+                                        @(Model.buttonRecords[i].RejectCode == "None" ? "" : Model.buttonRecords[i].RejectCode)
+                                    </td>
+                                    <td>
+                                        @(Model.buttonRecords[i].KeyId == 0 ? "" : Model.buttonRecords[i].Name + " " + Model.buttonRecords[i].LastName )
+                                    </td>
+                                    <td>
+                                        @(Model.buttonRecords[i].country == "..." ? "" : Model.buttonRecords[i].country)
+                                    </td>
+                                    <td>
+                                        @(Model.buttonRecords[i].Value == 0 ? "" : Format.AsCurrency(Model.buttonRecords[i].Value))
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+
+
+                        <thead>
+                            <tr>
+                                <th>Date/Time</th>
+                                <th>Event</th>
+                                <th>Reject</th>
+                                <th>Collector</th>
+                                <th>Country</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < Model.history.Count; i++)
+                            {
+                                <tr>
+                                    <td>
+                                        @Format.AsDate(Model.history[i].Timestamp) @Format.AsTime(Model.history[i].Timestamp)
+                                    </td>
+                                    <td>
+                                        @Model.history[i].RecordType
+                                    </td>
+                                    <td>
+                                        @(Model.history[i].RejectCode == "None" ? "" : Model.history[i].RejectCode)
+                                    </td>
+                                    <td>
+                                        @(Model.history[i].KeyId == 0 ? "" : Model.history[i].KeyId.ToString())
+                                    </td>
+                                    <td>
+                                        @(Model.history[i].Country == "..." ? "" : Model.history[i].Country)
+                                    </td>
+                                    <td>
+                                        @(Model.history[i].Value == 0 ? "" : Format.AsCurrency(Model.history[i].Value))
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    </table>
+
+                </div>
+            </div>
+
+</main>
+</section>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
+@section Scripts{
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+    @Scripts.Render("~/bundles/js/ViewsHistoryIndex")
+    <script>
+        $(document)
+            .ready(function() {
+                HistoryIndex.initialise('@Model.code.Code');
+                $('#tebs-bag-history').DataTable({
+                    "order": [0,'desc']
+                });
+            });
+    </script>
+}
+
+

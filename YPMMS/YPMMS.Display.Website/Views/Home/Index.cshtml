@@ -1,0 +1,196 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SCC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700|Roboto:100,300,400,500,700|Raleway:800,700,600,500,300" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Content/css/normalize.min.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap-minimal.css">
+    <link rel="stylesheet" href="~/Content/css/animations.css">
+    <link rel="stylesheet" href="~/Content/css/landing-style.css">
+</head>
+<body>
+    <!--[if lt IE 9]>
+        <p class="browserupgrade" style="position:fixed; top:0px; z-index:99999; text-align:center; width:100%">You are using an <strong>outdated</strong> browser. Some of the features will not work correctly. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!--CONTENT STARTS HERE/////////////////////////////////////////////////////////////////////////////-->
+
+
+
+    <section class="first-section">
+        <header>@Html.ActionLink("Sign In", "Login", "Account", null, new { Class = "create-account-btn" })</header>
+        <div class="content">
+            <div class="has-parallax" style="position: absolute; width: 100%;">
+                <img class="mooey" src="~/Content/img/general/itl-logo-inverted.png">
+                <h1 class="mooey">SCC</h1>
+                <h2 class="mooey">Manage your whole machine estate with SCC management</h2>
+                <span class="scroll-btn pt-page-scaleUp animate-delay2">
+                    <a href="#"><span class="mouse"><span></span></span></a>
+                    <p>scroll down</p>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="second-section">
+        <div id="sticky-anchor"></div>
+        <header id="sticky">
+            <div class="logo-container"><img src="~/Content/img/svg/livecollect-logo-inverted-red.svg"></div>
+        </header>
+
+
+        <h1 class="test">
+            Live Collect
+            <div class="line-with-pointer"></div>
+        </h1>
+
+        <div class="container" style="text-align: center;">
+            <div class="row">
+                <div id="key-features1" class="col-md-4 animation-test element-to-hide">
+                    <li><p>Live data & reporting for an individual machine to the complete estate</p></li>
+                    <li><p>Remote updates for peripherals</p></li>
+                    <li><p>Preventative maintenance management</p></li>
+                </div>
+                <div class="col-md-4 device-images">
+                    <div id="sketch-device" class="animation-sooner">
+                        <img src="~/Content/img/general/live-collect-device-sketch.png">
+                    </div>
+                    <div id="rendered-device" class="animation-sooner element-to-hide">
+                        <img src="~/Content/img/general/live-collect-device-render.png">
+                    </div>
+                </div>
+
+                <div id="key-features2" class="col-md-4 animation-test element-to-hide">
+                    <li><p>Optimise money handling through didactic float</p></li>
+                    <li><p>Historical statistics</p></li>
+                    <li><p>GPRS</p></li>
+                </div>
+
+            </div><!--end row-->
+
+            <div class="row">
+                <div class="col-lg-12 animation-test element-to-hide" id="about-text">
+
+                    <p style="line-height: 30px; margin-top: 60px">
+                        Live Collect is a state of the art cash management system that allows operators to optimise cash handling across their machine estate with live data and reporting. Live Collect works exclusively with Innovative Technology’s SMART Coin System and note validator range and provides operators with real time and historic cash level statistics.
+                    </p>
+                    <p style="line-height: 30px; margin-top: 40px">
+                        2G – 4G or wifi signal means you are always live and because all machines are linked, operators can use Live Collect to update their cash handling peripherals across the machine estate remotely when any updates are issued.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div><!--end container-fluid-->
+
+
+
+
+
+
+    </section>
+
+
+
+
+    <section id="live-collections">
+        <div class="container-fluid" style="max-width: 1400px;">
+            <div class="row">
+                <header class="col-lg-12 animation-sooner element-to-hide" style="text-align: center">
+                    <h1>Remote Updates</h1>
+                    <h2>Quick and easy remote updates</h2>
+                    <div class="line-with-pointer"></div>
+                </header><!--end col-->
+                <div id="map" class="col-lg-8 animation-sooner element-to-hide">
+                    <img class="collections-map-image" src="~/Content/img/general/map-for-landing.png">
+                </div><!--end col-->
+                <div id="text" class="col-lg-4 animation-test element-to-hide">
+                    <p>Live collect links all of your machines so any updates can be pushed out from one central location. Live collect enables quick and easy, remote updates eradicating the need to visit multiple locations to update individual machines. Time consuming, expensive currency and firmware updates are a thing of the past and can be installed at the click of a button!</p>
+                </div><!--end col-->
+            </div><!--end row-->
+
+
+
+        </div><!--end container-->
+    </section>
+
+
+
+    <section id="mobile">
+        <div class="slanted-divider-block2"></div>
+        <div class="slanted-divider-block animation-sooner"></div>
+
+        <div class="mobile-container">
+            <div class="mobile mobile-one animation-test default element-to-hide"><img src="~/Content/img/general/mobile-graphic.png"></div>
+            <div class="mobile mobile-two animation-test default element-to-hide"><img src="~/Content/img/general/mobile-graphic2.png"></div>
+            <div class="mobile mobile-three animation-test default element-to-hide"><img src="~/Content/img/general/mobile-graphic3.png"></div>
+            <div id="mobile-text">
+                <h1>Mobile & Tablet</h1>
+                <p>Receive instant notifications via email or text.</p><p> Monitor real time & historical data at any time with full visibility of all cash transactions where ever you are.  </p>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <section id="laptops">
+
+        <div class="container-fluid">
+            <div class="row">
+                <header class="col-lg-12 animation-sooner element-to-hide cash-handling">
+                    <h1>Optimise Cash Handling – Data & Reporting</h1>
+                    <p>Live Collect reporting can be used to optimise money handling. Real time data can be utilised to analyse your whole machine estate, peak times of operation or provide the cash status of every individual machine.  </p>
+                    <p>Live Collect data and historical statistics can be used to create intrinsic float levels specific for an individual machine, these SMART Float levels calculate the optimum float level for a machine, releasing cash previously tied up in generic float levels. This data can be used to plan more efficient collection routes, minimising unnecessary refill and collection visits.  </p>
+                </header>
+                <div class="col-lg-12">
+                    <div class="laptop-images">
+                        <img class="small-one animation-sooner element-to-hide" src="~/Content/img/general/laptop-2.png">
+                        <img class="small-two animation-sooner element-to-hide" src="~/Content/img/general/laptop-3.png">
+                        <img class="large-laptop" src="~/Content/img/general/laptop-1.png">
+                    </div>
+                </div>
+            </div><!--end row-->
+        </div><!--end container-fluid-->
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--CONTENT ENDS HERE/////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <script src="~/Content/js/landing-scripts.js"></script>
+    <script src="~/Scripts/smoothscroll.min.js"></script>
+
+</body>
+</html>

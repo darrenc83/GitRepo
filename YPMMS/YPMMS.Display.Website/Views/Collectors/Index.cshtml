@@ -1,0 +1,49 @@
+﻿<section class="content">
+    <main class="container-fluid">
+        <div class="pt-page-moveFromRightFade">
+
+            <h1>Choose a Collector</h1>
+            <p>Select a collector from the list below to view a full profile, collection & refill history</p>
+
+            <table id="collector-user-list-table" class="common-simple-table mobile-responsive-big">
+                <tr>
+                    <th>Collector Name</th>
+                    <th>Collector ID</th>
+                    <th>iButton ID</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Country</th>
+                    @*<th>Collect status</th>*@
+                    <th>Machine ID</th>
+                    <th>Last update</th>
+                    <th>Assigned Machines</th>
+                </tr>
+
+                @***** START: Template for the collector row *****@
+                <tr id="template__collector-details" class="hidden-mobile-titles collector-summary-row">
+                    <td class="collector-name"><strong></strong></td>
+                    <td class="collector-id"></td>
+                    <td class="collector-key-id"></td>
+                    <td class="collector-email"><a></a></td>
+                    <td class="collector-phone"></td>
+                    <td class="collector-country"></td>
+                    @*<td class="collector-collection-status"></td>*@
+                    <td class="collector-machine-id"></td>
+                    <td class="collector-last-update-time"></td>
+                    <td class="collector-assigned-machines"></td>
+                </tr>
+                @***** END: Template for the collector row *****@
+
+            </table>
+        </div>
+    </main><!--end container-->
+</section><!--end of content-->
+
+@section Scripts {
+    @Scripts.Render("~/bundles/js/ViewsCollectorsIndex")
+    <script>
+        $(document).ready(function() {
+            CollectorsIndex.initialise();
+        });
+    </script>
+}

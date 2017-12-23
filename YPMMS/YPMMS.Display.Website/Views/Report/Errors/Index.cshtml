@@ -1,0 +1,120 @@
+﻿<section class="content">
+    <main class="container-fluid">
+        <div class="breadcrumb">
+            <a href="/Overview" class="home-button"></a>
+            <a href="/Report">Reports</a>
+            <span>•</span>
+            <p>Error Stats</p>
+        </div>
+
+        <div class="reports-mobile-message">
+            <h3>These Reports are not available on small resolutions</h3>
+            <h4>Please view this on a device with at least</h4>
+            <h4>1000px wide resolution</h4>
+        </div>
+
+        <div class="complete-container week-view second-view" id="reports-error-stats">
+
+            <h1>System Error Statistics</h1>
+            <a class="download-report-btn">Download CSV report</a>
+
+            <!--LEFT SECTION-->
+            <section class="left-info">
+                <div class="toggle-options">
+
+                    <div id="option-filter-minimum-hopper" class="disabled">
+                        <label class="toggle-style no-text-small">
+                            <input type="checkbox" id="" class="checkbox-style" disabled />
+                            <span class="toggle-text"></span>
+                            <span class="toggle-handle"></span>
+                        </label>
+                        <p>Hide Systems with no errors</p>
+                    </div>
+                </div><!--end toggle-options-->
+
+                <input class="search-box" type="search" placeholder="quick filter results" name="search-list">
+
+            </section>
+
+            <!--RIGHT SECTION-->
+            <section class="right-info">
+                <div class="date-options">
+                    <!--date-picker-->
+                    <div id="reportrange">
+                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                        <span></span> <b class="caret"></b>
+                    </div>
+
+                </div><!--end date-options-->
+                <!--header for view1-->
+                <header class="reports-details-header overview-view">
+                    <h1>Error Statistics</h1>
+                </header>
+                <!--header for day-view-->
+                <header class="reports-details-header view2 hidden">
+                    <h1>Minimum hopper levels - Day by Day breakdown</h1>
+                </header>
+
+            </section>
+
+            <section id="machineDetails" class="system-details left-block">
+                <div class="actual-information drag-scroll">
+                    <a class="left-arrow fix-this-at-top"></a>
+                    <a class="right-arrow fix-this-at-top scrollright"></a>
+                    <div class="pillars left"></div>
+                    <div class="shadow left"></div>
+                    <div class="pillars right"></div>
+                    <div class="shadow right"></div>
+                    <header class="stick-this">
+                        <ul class="header-inside fix-this-at-top">
+                            <li><p>Customer</p><span class="little-arrow"></span></li>
+                            <li><p>Site Details</p><span class="little-arrow"></span></li>
+                            <li><p>Location</p><span class="little-arrow"></span></li>
+                            <li class="postcode"><p>Postcode</p><span class="little-arrow"></span></li>
+                            <li class="position"><p>Position</p><span class="little-arrow"></span></li>
+                            <li><p>Machine Name</p><span class="little-arrow"></span></li>
+                            <li><p>Depot</p><span class="little-arrow"></span></li>
+                        </ul>
+                    </header>
+
+                    <!--start of content-->
+                    <div class="reports-content">
+                        <ul class="report-container">
+                            @{ Html.RenderAction("MachineDetails"); }
+                        </ul>
+                    </div><!--end reports content-->
+                    <!--end of content-->
+
+                </div><!--end actual-information-->
+            </section>
+
+            <!--THIS IS THE DEFAULT RIGHT HAND SIDE VIEW-->
+            <section id="statisticsContainer" class="system-details right-block">
+                @{ Html.RenderAction("Statistics"); }
+            </section>
+
+</div><!--end complete-container-->
+
+    </main><!--end container-->
+
+    <div class="loading-message-corner">
+        <div class="loader-container"><div class="loader2"></div></div>
+        <p class="info">Loading new date(s)</p>
+        <p class="secondary-info">This may take a moment</p>
+        <p class="failed-to-load">Failed to Load</p>
+    </div>
+
+</section><!--end of content-->
+
+@section Scripts {
+    <script src="~/Content/js/pages/reports.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtRa3gxfbyKlldNGgim0y5CN_F-EOdbHM"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    @Scripts.Render("~/bundles/js/ViewsReportErrors")
+    <script>
+        $(document)
+            .ready(function() {
+                ReportErrors.initialise();
+            });
+    </script>
+}

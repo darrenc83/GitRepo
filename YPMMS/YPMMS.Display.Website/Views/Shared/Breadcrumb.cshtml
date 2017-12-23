@@ -1,0 +1,14 @@
+﻿@model YPMMS.Display.Website.Models.Breadcrumb.BreadcrumbTrailModel
+
+<div class="breadcrumb">
+    <span class="home-button"></span>
+   
+    @foreach (var breadcrumb in Model.Breadcrumbs.Take(Model.Breadcrumbs.Count - 1))
+    {
+        <a href="@breadcrumb.Url">@breadcrumb.Caption</a>
+        <span>•</span>
+    }
+
+    <p>@Model.Breadcrumbs.Last().Caption</p>
+
+</div>

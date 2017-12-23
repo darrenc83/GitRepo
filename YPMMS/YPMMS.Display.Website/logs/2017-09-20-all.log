@@ -1,0 +1,14 @@
+2017-09-20 16:07:19.9306 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:08:28.4578 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:09:06.9598 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:09:19.5525 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL Development (itldev@itl.com)
+2017-09-20 16:12:10.3150 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:12:21.7922 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL Development (itldev@itl.com)
+2017-09-20 16:14:31.9401 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:14:43.9892 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL Development (itldev@itl.com)
+2017-09-20 16:19:29.5305 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:19:42.2082 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL Development (itldev@itl.com)
+2017-09-20 16:22:39.3900 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:22:51.0337 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL Development (itldev@itl.com)
+2017-09-20 16:28:03.5765 INFO LiveCollect.Display.Website.Startup Startup.Configuration() called
+2017-09-20 16:28:19.9865 INFO LiveCollect.Display.Website.Controllers.AccountController User logged in: ITL Development (itldev@itl.com)

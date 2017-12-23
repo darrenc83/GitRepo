@@ -1,0 +1,127 @@
+﻿@using YPMMS.Display.Utilities
+@model YPMMS.Shared.Core.Models.CollectionEvent
+
+@{
+    var bills = Model.BillCollections.OrderBy(c => c.Value).ToList();
+    var coins = Model.CoinCollections.OrderBy(c => c.Value).ToList();
+
+    var billsHeading = Model.IsCollection
+        ? "Bills Collected"
+        : "Bills Refilled";
+
+    var coinsHeading = Model.IsCollection
+        ? "Coins Collected"
+        : "Coins Refilled";
+}
+
+<table class="common-simple-table mobile-responsive" id="collected-table">
+
+    @if (bills.Any())
+    {
+        <tr>
+            <th>@billsHeading</th>
+            @foreach (var bill in bills)
+            {
+                var cssClass = (bill.Level == 0) ? "disabled" : string.Empty;
+                <th class="@cssClass">@Format.AsCurrency(bill.Value, bill.Currency)</th>
+            }
+        </tr>
+        <tr>
+            <td><span class="hidden-title">@billsHeading</span><strong>@Format.AsCurrency(bills.Sum(b => b.TotalValue), bills.First().Currency)</strong></td>
+            @foreach (var bill in bills)
+            {
+                var billLevel = (bill.Level > 0) ? bill.Level.ToString() : string.Empty;
+                <td><span class="hidden-title">@Format.AsCurrency(bill.Value, bill.Currency)</span>@billLevel</td>
+            }
+        </tr>
+    }
+
+    @if (coins.Any())
+    {
+        <tr>
+            <th>@coinsHeading</th>
+            @foreach (var coin in coins)
+            {
+                var cssClass = (coin.Level == 0) ? "disabled" : string.Empty;
+                <th class="@cssClass">@Format.AsCurrency(coin.Value, coin.Currency)</th>
+            }
+        </tr>
+        <tr>
+            <td><span class="hidden-title">@coinsHeading</span><strong>@Format.AsCurrency(coins.Sum(c => c.TotalValue), coins.First().Currency)</strong></td>
+            @foreach (var coin in coins)
+            {
+                var billLevel = (coin.Level > 0) ? coin.Level.ToString() : string.Empty;
+                <td><span class="hidden-title">@Format.AsCurrency(coin.Value, coin.Currency)</span>@billLevel</td>
+            }
+        </tr>
+    }
+
+</table>
+
+
+
+
+@*
+    <div class="currencies-display" id="refilled-cash-summary">
+
+        <div class="currency-column">
+
+            <div class="group top">
+                <div class="heading">Coins Refilled</div><div class="total">£2000</div>
+            </div>
+            <div class="group">
+                <div>£0.01</div><div>1</div>
+            </div>
+            <div class="group">
+                <div>£0.02</div><div>1</div>
+            </div>
+            <div class="group">
+                <div>£0.05</div><div>1</div>
+            </div>
+            <div class="group">
+                <div>£0.10</div><div>20</div>
+            </div>
+            <div class="group disabled">
+                <div>£0.20</div><div></div>
+            </div>
+            <div class="group disabled">
+                <div>£0.50</div><div></div>
+            </div>
+            <div class="group disabled">
+                <div>£1.00</div><div></div>
+            </div>
+            <div class="group">
+                <div>£2.00</div><div>12</div>
+            </div>
+
+        </div><!--end currencuy column-->
+
+
+
+
+        <div class="currency-column">
+
+            <div class="group top">
+                <div class="heading">Bills Refilled</div><div class="total">£2000</div>
+            </div>
+            <div class="group">
+                <div>£5.00</div><div>1</div>
+            </div>
+            <div class="group">
+                <div>£10.00</div><div>10</div>
+            </div>
+            <div class="group">
+                <div>£20.00</div><div>5</div>
+            </div>
+            <div class="group">
+                <div>£50.00</div><div>1</div>
+            </div>
+
+
+        </div><!--end currencuy column-->
+
+
+
+    </div>
+
+*@

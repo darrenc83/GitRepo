@@ -1,0 +1,33 @@
+﻿@using YPMMS.Shared.Core.Models
+@using YPMMS.Display.Website.Extensions
+@model IList<ReportOfflineMachineDailyTotalsModel>
+<div class="actual-information drag-scroll">
+    <a class="left-arrow fix-this-at-top"></a>
+    <a class="right-arrow fix-this-at-top scrollright"></a>
+    <div class="pillars left"></div>
+    <div class="shadow left"></div>
+    <div class="pillars right"></div>
+    <div class="shadow right"></div>
+    <header class="stick-this">
+        <ul class="header-inside fix-this-at-top">
+            @for (var currentDate = ViewBag.ReportStart; currentDate < ViewBag.ReportEnd; currentDate = currentDate.AddDays(1))
+            {
+                <li>@currentDate.ToString(ViewBag.ShortCustomDateFormat)</li>
+            }
+        </ul>
+    </header>
+    <div class="reports-content">
+        <ul class="report-container">
+            @foreach (var machine in Model)
+            {
+                <li class="report-row" data-id="@machine.MachineId">
+                    @foreach (var day in machine.Totals)
+                    {
+                        <div class="cell">@day.HoursTotal.ToHoursMinutes()</div>
+                    }
+                </li>
+            }
+        </ul>
+
+    </div><!--end reports content-->
+</div>

@@ -1,0 +1,136 @@
+﻿@using YPMMS.Display.Utilities
+@using YPMMS.Display.Website.Extensions
+@using YPMMS.Display.Website.Models.Breadcrumb
+@using YPMMS.Shared.Core.Enums
+@using YPMMS.Shared.Core.Extensions
+@model YPMMS.Shared.Core.Models.CollectionEvent
+
+@{
+    var pageHeading = Model.IsCollection
+        ? "Collection Detail"
+        : "Refill Detail";
+
+    var tableCaption = Model.IsCollection
+        ? "The following table shows the total amount of each coin and bill that were collected by the collector"
+        : "The following table shows the total amount of each coin and bill that were refilled by the collector";
+
+    var totalCaption = Model.IsCollection
+        ? "Total Cash Collected"
+        : "Total Cash Refilled";
+
+    var collectorCaption = Model.IsCollection
+        ? "Collector"
+        : "Refilled By";
+
+    var collectorName = Model.Collector.Name;
+
+    var summaryHeading = Model.IsCollection
+        ? "Collection Summary"
+        : "Refill Summary";
+
+    var total = Model.IsCollection
+        ? Model.TotalCollected
+        : Model.TotalRefilled;
+
+    var breadcrumbTrail = new BreadcrumbTrailModel();
+    if (Request.UrlReferrer != null && Request.UrlReferrer.AbsolutePath.Contains("Machine"))
+    {
+        breadcrumbTrail
+            .Add(BreadcrumbType.Overview)
+            .Add(BreadcrumbType.Machine, Model.MachineId)
+            .Add(Model.IsCollection ? BreadcrumbType.CollectionDetail : BreadcrumbType.RefillDetail);
+    }
+    else if (User.HasRole(Role.Collector))
+    {
+        breadcrumbTrail
+            .Add(BreadcrumbType.CollectorProfile)
+            .Add(Model.IsCollection ? BreadcrumbType.CollectionDetail : BreadcrumbType.RefillDetail);
+    }
+    else if (Model.IsManagerRefill)
+    {
+        breadcrumbTrail
+            .Add(BreadcrumbType.ManagerRefill)
+            .Add(BreadcrumbType.ManagerMachineProfile, Model.MachineId)
+            .Add(BreadcrumbType.RefillDetail);
+    }
+    else
+    {
+        breadcrumbTrail
+            .Add(BreadcrumbType.Collectors)
+            .Add(BreadcrumbType.CollectorProfile, Model.CollectorId)
+            .Add(Model.IsCollection ? BreadcrumbType.CollectionDetail : BreadcrumbType.RefillDetail);
+    }
+}
+
+<section class="content">
+    <main class="container-fluid">
+
+        @Html.Partial("Breadcrumb", breadcrumbTrail)
+
+        <main id="Collection-history-content" class="pt-page-moveFromRightFade">
+            <h1>@pageHeading</h1>
+            <div class="individual-collection-time">
+                <span class="date">@Format.AsDate(Model.Timestamp)</span><span class="time">@Format.AsTime(Model.Timestamp)</span>
+            </div>
+            <table id="collection-details-table">
+                <col width="120"></col>
+                <tr>
+                    <td>System:</td>
+                    <td>
+                        @if (User.IsInRole(Role.Admin.ToString()))
+                        {
+                            <a href="/Machine/@Model.MachineId">@Model.Machine.Name</a>
+                        }
+                        else
+                        {
+                            @Model.Machine.Name
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>@collectorCaption:</td>
+                    <td><strong>@collectorName</strong></td>
+                </tr>
+                <tr>
+                    <td>Site:</td>
+                    <td>@Model.Machine.Site.Name</td>
+                </tr>
+                <tr>
+                    <td>ID:</td>
+                    <td>@Model.Machine.Id</td>
+                </tr>
+                @if (Model.CollectionType.IsError())
+                {
+                    <tr class="error">
+                        <td>Error:</td>
+                        <td class="errorDetails">@Model.CollectionType.GetDescription()</td>
+                    </tr>
+                }
+                <tr>
+                    <td>Country:</td>
+                    <td>@Model.Machine.Site.Country</td>
+                </tr>
+@*
+                @if (!Model.IsManagerRefill)
+                {
+                    <tr>
+                        <td>Base Location:</td>
+                        <td>TODO</td>
+                    </tr>
+                }
+*@
+            </table>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1><img src="~/Content/img/svg/collections-icon.svg" width="60" style="margin-bottom: -24px;">@summaryHeading</h1>
+                    <p class="small-helper-text">@tableCaption</p>
+                    @Html.Partial("~/Views/Shared/Tables/CashTableCollectedRefilled.cshtml")
+
+                    <h2>@totalCaption = <strong>@Format.AsCurrency(total, Model.Currency)</strong></h2>
+                </div>
+            </div><!--end row-->
+        </main>
+    </main><!--end container-->
+</section><!--end of content-->

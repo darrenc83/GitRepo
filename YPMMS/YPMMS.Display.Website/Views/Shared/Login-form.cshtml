@@ -1,0 +1,42 @@
+﻿<form class="style-forms" action="" method="post" name="login" id="validate-login">
+
+    <div class="input-container">
+        <div class="input2 input--haruki">
+            @Html.TextBoxFor(m => m.Email, new { @class = "input__field input__field--haruki" })
+
+            <label class="input__label input__label--haruki">
+                <span class="field-icon-container">
+                    <span class="field-icon username-icon"></span>
+                </span>
+                <span class="input__label-content input__label-content--haruki">Username/Email Address</span>
+            </label>
+
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    @*<div class="input-container">
+            <div class="input2 input--haruki">
+                <input class="input__field input__field--haruki" type="password" id="login-password" name="login-password" maxlength="30" required />
+                <label class="input__label input__label--haruki" for="input-2">
+                    <span class="field-icon-container">
+                        <span class="field-icon password-lock-icon"></span>
+                    </span>
+                    <span class="input__label-content input__label-content--haruki">Password</span>
+                </label>
+                <div class="success-icon little-green-tick"></div>
+                <div class="error-message">password is incorrect</div>
+                <div class="empty-message">This is a required field!</div>
+                <div class="caps-lock-alert">Caps Lock is on!<span class="pointer"></span><span class="pointer-border"></span></div>
+            </div>
+        </div>*@
+
+
+    <input type="submit" value="Log in" class="btn btn-default" />
+
+</form>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/js/jqueryval")
+}

@@ -1,0 +1,55 @@
+﻿<section class="content">
+
+    <main id="manager-refills">
+
+        <h1>Manager Refills</h1>
+        <p>You have systems in the following areas</p>
+
+        <div class="multiple-navigation pt-page-moveFromBottomFade">
+            <nav>
+                <div class="menu-container first-navigation">
+                    <div class="block-overlay-mask"></div>
+                    <h3>Sites</h3>
+                    <ul class="active-menu" id="sites-list">
+
+                        @***** START: Template for site details *****@
+                        <li id="template__site-details" class="site-details menuTrigger hidden" data-menu="">
+                            <span class="site-name"></span>
+                            <small><strong class="systems-count"></strong> systems</small>
+                        </li>
+                        @***** END: Template for site details *****@
+
+                    </ul>
+                </div>
+
+                <div class="menu-container second-navigation desktop-controls" id="machines-lists">
+                    <div class="block-overlay-mask"></div>
+                    <a class="go-back">Go back</a>
+
+
+                    @***** START: Template for machine list *****@
+                    <ul id="template__site-machines-list" class="site-machines-list hidden">
+                        <h1></h1>
+
+                        @***** START: Template for individual machine *****@
+                        <li id="template__site_machine" class="hidden"><a></a></li>
+                        @***** END: Template for individual machine *****@
+
+                    </ul>
+                    @***** END: Template for machine list *****@
+
+                </div>
+                <div class="clearfix"></div>
+            </nav>
+        </div>
+    </main>
+</section><!--end of content-->
+
+@section Scripts {
+    @Scripts.Render("~/bundles/js/ViewsManagerIndex")
+    <script>
+        $(document).ready(function() {
+            ManagerIndex.initialise();
+        });
+    </script>
+}

@@ -1,0 +1,69 @@
+﻿@model YPMMS.Display.Website.Models.Account.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<section class="wrapper login-bg">
+
+    <section class="content">
+        @*<div class="logo-alternative"><img src="~/Content/img/general/tebs-connect-logo-inverted.png"></div>*@
+        <div class="logo-alternative" style="margin-top:0px;"><img src="~/Content/img/general/scc-new-logo.png" width="300"></div>
+        @*<div class="logo-alternative"><img src="~/Content/img/svg/scc-temp-logo.svg"></div>*@
+        <section id="login" class="pt-page-scaleUpCenter-1">
+            <h1>Sign in...</h1>
+            <p>Please sign in using your SCC username and password</p>
+            @*<a class="create-account-link" href="create-account.php">New Customer? Create A New Account</a>*@
+            <div class="login-email side-by-side">
+
+                <form class="style-forms" action="" method="post" name="login" id="validate-login">
+                    @Html.AntiForgeryToken()
+                    <div class="input-container">
+                        <div class="input2 input--haruki">
+                            @Html.TextBoxFor(m => m.Email, new {@class = "input__field input__field--haruki"})
+                            <label class="input__label input__label--haruki">
+                                <span class="field-icon-container">
+                                    <span class="field-icon username-icon"></span>
+                                </span>
+                                <span class="input__label-content input__label-content--haruki">Username/Email Address</span>
+                            </label>
+                            @Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <div class="input2 input--haruki">
+                            @Html.PasswordFor(m => m.Password, new {@class = "input__field input__field--haruki"})
+
+                            <label class="input__label input__label--haruki" for="input-2">
+                                <span class="field-icon-container">
+                                    <span class="field-icon password-lock-icon"></span>
+                                </span>
+                                <span class="input__label-content input__label-content--haruki">Password</span>
+                            </label>
+                            @Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Log in" class="login-button no-style"/>
+                    @Html.ValidationMessage("", new { @class = "text-danger" })
+                </form>
+
+                <div class="clearfix"></div>
+                @*<div class="remember-me">
+                        <div class="checkbox">
+                            <input id="check" type="checkbox" name="check" value="check">
+                            <label for="check">Remember Me</label>
+                        </div>
+                    </div>
+                    <a href="forgot-password.php" class="forgotten-login">Forgotten Login Details</a>
+                    <div class="clearfix"></div>*@
+
+            </div>
+        </section>
+    </section>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/js/jqueryval")
+}

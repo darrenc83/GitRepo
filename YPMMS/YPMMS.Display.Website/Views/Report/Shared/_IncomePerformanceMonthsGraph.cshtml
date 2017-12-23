@@ -1,0 +1,32 @@
+﻿@using YPMMS.Shared.Core.Models
+@model IList<ReportSystemIncomePerformanceMonthModel>
+
+<header>
+    <div id="monthsLeftArrowButton" class="left-switch-arrow"><span class="triangle top"></span><span class="triangle bottom"></span></div>
+    <div id="monthsRightArrowButton"class="right-switch-arrow"><span class="triangle top"></span><span class="triangle bottom"></span></div>
+</header>
+<div class="graph-body months" data-year="@ViewBag.ReportYear">
+    <div class="title"><div>@ViewBag.ReportYear</div></div>
+    <ul class="y-axis">
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li><div class="amount"></div></li>
+        <li class="zero"><div class="amount">£0</div></li>
+    </ul>
+    <div class="bars-container">
+        @foreach (var month in Model)
+        {
+            DateTime monthDate = (new DateTime(ViewBag.ReportYear, month.Month, 1));
+            string monthStringLong = monthDate.ToString("MMMM");
+            string monthStringShort = monthDate.ToString("MMM");
+            string monthTotalString = string.Format("{0:0.00}", month.Total);
+            string selected = ViewBag.ReportMonth == month.Month ? "selected" : "";
+            <div class="bars-outer @selected" data-month="@month.Month">
+                <div class="heading-title"><span class="triangle top"></span><span class="triangle bottom"></span>@monthStringShort</div>
+                <div class="fill" data-total-money="@monthTotalString" data-month="@monthStringLong"></div>
+            </div>
+        }
+    </div><!--end bars-container-->
+</div><!--end graph body-->

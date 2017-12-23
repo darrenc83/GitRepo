@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "InviteResponse";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+
+<section class="wrapper login-bg">
+
+    <section class="content">
+        <div class="logo-alternative"><img src="~/Content/img/svg/livecollect-logo.svg"></div>
+
+        <section id="login" class="pt-page-scaleUpCenter-1">
+            <h1>Setup your account</h1>
+            <p>Please enter your username and create a password for this account</p>
+            <div class="login-email side-by-side">
+
+                <form class="style-forms" action="" method="post" name="login" id="validate-login">
+
+                    <div class="input-container">
+                        <div class="input2 input--haruki">
+                            <input class="input__field input__field--haruki" type="text" id="login-username" name="login-username" maxlength="50" pattern="[a-zA-Z0-9]+" title="required input" required />
+                            <label class="input__label input__label--haruki" for="input-1">
+                                <span class="field-icon-container">
+                                    <span class="field-icon username-icon"></span>
+                                </span>
+                                <span class="input__label-content input__label-content--haruki">Username/Email Address</span>
+                            </label>
+                            <div class="success-icon little-green-tick"></div>
+                            <div class="error-message">Cannot include invalid characters or spaces</div>
+                            <div class="empty-message">This is a required field!</div>
+                        </div>
+                    </div>
+
+
+                    <div class="input-container">
+                        <div class="input2 input--haruki">
+                            <input class="input__field input__field--haruki" type="password" id="login-password" name="login-password" maxlength="30" required />
+                            <label class="input__label input__label--haruki" for="input-2">
+                                <span class="field-icon-container">
+                                    <span class="field-icon password-lock-icon"></span>
+                                </span>
+                                <span class="input__label-content input__label-content--haruki">Password</span>
+                            </label>
+                            <span class="text-danger field-validation-error hidden" data-valmsg-replace="true" data-valmsg-for="Email">
+                                <span class="" for="Email">The Email field is required.</span>
+                            </span>
+                            <div class="success-icon little-green-tick"></div>
+                            <div class="error-message">password is incorrect</div>
+                            <div class="empty-message">This is a required field!</div>
+                            <div class="caps-lock-alert">Caps Lock is on!<span class="pointer"></span><span class="pointer-border"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <div class="input2 input--haruki">
+                            <input class="input__field input__field--haruki" type="password" id="login-password" name="login-password" maxlength="30" required />
+                            <label class="input__label input__label--haruki" for="input-2">
+                                <span class="field-icon-container">
+                                    <span class="field-icon password-lock-icon"></span>
+                                </span>
+                                <span class="input__label-content input__label-content--haruki">Confirm password</span>
+                            </label>
+                            <span class="text-danger field-validation-error hidden" data-valmsg-replace="true" data-valmsg-for="Email">
+                                <span class="" for="Email">The Email field is required.</span>
+                            </span>
+                            <div class="success-icon little-green-tick"></div>
+                            <div class="error-message">password is incorrect</div>
+                            <div class="empty-message">This is a required field!</div>
+                            <div class="caps-lock-alert">Caps Lock is on!<span class="pointer"></span><span class="pointer-border"></span></div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+
+
+
+
+                <a href="" class="login-button">Sign In</a>
+
+
+            </div>
+        </section>
+
+
+    </section><!--end login bg-->
+
+
+
+
+
+
+
+
+
+    </section><!--end of content-->
+

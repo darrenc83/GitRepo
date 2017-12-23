@@ -1,0 +1,97 @@
+﻿@using YPMMS.Shared.Core.Models
+@model IList<ReportOfflineMachineIntervalsModel>
+
+<div class="actual-information drag-scroll">
+    <a class="left-arrow fix-this-at-top"></a>
+    <a class="right-arrow fix-this-at-top scrollright"></a>
+    <div class="pillars left"></div>
+    <div class="shadow left"></div>
+    <div class="pillars right"></div>
+    <div class="shadow right"></div>
+    <header class="stick-this">
+        <ul class="header-inside fix-this-at-top">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+        </ul>
+    </header>
+    <div class="reports-content">
+        <ul class="report-container">
+            @{
+                var hoursWidthPx = 28;
+                var reportDateTimeStart = ViewBag.HoursViewDate;
+                var reportDateTimeEnd = reportDateTimeStart.AddDays(1);
+            }
+            @foreach (var machine in Model)
+            {
+                <li class="report-row" data-id="@machine.MachineSite.Id">
+
+                    @foreach (var interval in machine.OfflineIntervals)
+                    {
+                        var intervalStart = interval.Start < reportDateTimeStart ? reportDateTimeStart : interval.Start;
+                        var intervalEnd = interval.End >= reportDateTimeEnd ? reportDateTimeEnd : interval.End;
+                        var left = hoursWidthPx * (intervalStart - reportDateTimeStart).TotalHours;
+                        var width = hoursWidthPx * (intervalEnd - intervalStart).TotalHours;
+                        var cssClass = "";
+                        if (interval.HoursOffline >= 10 && interval.HoursOffline < 24)
+                        {
+                            cssClass = "ten-plus";
+                        }
+                        else if (interval.HoursOffline >= 24)
+                        {
+                            cssClass = "twentyfour-plus";
+                        }
+
+                        <div class="offline-time-bar @cssClass" style="left: @(left)px; width: @(width)px;"></div>
+                    }
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </li>
+            }
+        </ul>
+
+    </div><!--end reports content-->
+</div>

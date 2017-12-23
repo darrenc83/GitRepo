@@ -1,0 +1,2 @@
+2017-09-06 13:43:58.7040 ERROR LiveCollect.Display.Website.Controllers.SystemEventsController System.NullReferenceException: Object reference not set to an instance of an object.
+   at LiveCollect.Display.Website.Controllers.SystemEventsController.<GetLatestSystemEventsAsync>d__1.MoveNext() in C:\GitRepo\sb-connect-website\SCCWebsite\LiveCollect.Display.Website\Controllers\SystemEventsController.cs:line 56
