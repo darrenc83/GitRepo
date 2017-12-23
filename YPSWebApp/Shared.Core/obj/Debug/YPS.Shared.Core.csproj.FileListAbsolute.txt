@@ -2,3 +2,8 @@ C:\YPSWebApp\YPSWebApp\Shared.Core\bin\Debug\Shared.Core.dll
 C:\YPSWebApp\YPSWebApp\Shared.Core\bin\Debug\Shared.Core.pdb
 C:\YPSWebApp\YPSWebApp\Shared.Core\obj\Debug\Shared.Core.dll
 C:\YPSWebApp\YPSWebApp\Shared.Core\obj\Debug\Shared.Core.pdb
+D:\GitRepo\YPSWebApp\Shared.Core\bin\Debug\Shared.Core.dll
+D:\GitRepo\YPSWebApp\Shared.Core\bin\Debug\Shared.Core.pdb
+D:\GitRepo\YPSWebApp\Shared.Core\obj\Debug\YPS.Shared.Core.csproj.CoreCompileInputs.cache
+D:\GitRepo\YPSWebApp\Shared.Core\obj\Debug\Shared.Core.dll
+D:\GitRepo\YPSWebApp\Shared.Core\obj\Debug\Shared.Core.pdb

@@ -7,3 +7,13 @@ C:\YPSWebApp\YPSWebApp\Data.Repository\bin\Debug\AutoMapper.xml
 C:\YPSWebApp\YPSWebApp\Data.Repository\obj\Debug\YPS.Data.Repository.csprojResolveAssemblyReference.cache
 C:\YPSWebApp\YPSWebApp\Data.Repository\obj\Debug\Data.Repository.dll
 C:\YPSWebApp\YPSWebApp\Data.Repository\obj\Debug\Data.Repository.pdb
+D:\GitRepo\YPSWebApp\Data.Repository\bin\Debug\Data.Repository.dll
+D:\GitRepo\YPSWebApp\Data.Repository\bin\Debug\Data.Repository.pdb
+D:\GitRepo\YPSWebApp\Data.Repository\bin\Debug\AutoMapper.dll
+D:\GitRepo\YPSWebApp\Data.Repository\bin\Debug\Shared.Core.dll
+D:\GitRepo\YPSWebApp\Data.Repository\bin\Debug\Shared.Core.pdb
+D:\GitRepo\YPSWebApp\Data.Repository\bin\Debug\AutoMapper.xml
+D:\GitRepo\YPSWebApp\Data.Repository\obj\Debug\YPS.Data.Repository.csprojResolveAssemblyReference.cache
+D:\GitRepo\YPSWebApp\Data.Repository\obj\Debug\YPS.Data.Repository.csproj.CoreCompileInputs.cache
+D:\GitRepo\YPSWebApp\Data.Repository\obj\Debug\Data.Repository.dll
+D:\GitRepo\YPSWebApp\Data.Repository\obj\Debug\Data.Repository.pdb
