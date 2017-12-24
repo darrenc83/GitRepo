@@ -1,7 +1,0 @@
-C:\YPSWebApp\YPSWebApp\Data.Repository\bin\Release\Data.Repository.dll
-C:\YPSWebApp\YPSWebApp\Data.Repository\bin\Release\Data.Repository.pdb
-C:\YPSWebApp\YPSWebApp\Data.Repository\bin\Release\Shared.Core.dll
-C:\YPSWebApp\YPSWebApp\Data.Repository\bin\Release\Shared.Core.pdb
-C:\YPSWebApp\YPSWebApp\Data.Repository\obj\Release\YPS.Data.Repository.csprojResolveAssemblyReference.cache
-C:\YPSWebApp\YPSWebApp\Data.Repository\obj\Release\Data.Repository.dll
-C:\YPSWebApp\YPSWebApp\Data.Repository\obj\Release\Data.Repository.pdb
