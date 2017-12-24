@@ -1,2 +1,0 @@
-﻿CREATE USER [YPMMSUser] FOR LOGIN [YPMMSUser];
-
