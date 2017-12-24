@@ -1,0 +1,5 @@
+C:\YPSWebApp\YPSWebApp\Shared.Core\bin\Release\Shared.Core.dll
+C:\YPSWebApp\YPSWebApp\Shared.Core\bin\Release\Shared.Core.pdb
+C:\YPSWebApp\YPSWebApp\Shared.Core\obj\Release\YPS.Shared.Core.csprojResolveAssemblyReference.cache
+C:\YPSWebApp\YPSWebApp\Shared.Core\obj\Release\Shared.Core.dll
+C:\YPSWebApp\YPSWebApp\Shared.Core\obj\Release\Shared.Core.pdb
